@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Questions & Discussions
+    url: https://github.com/gocronx-team/memlimit/discussions
+    about: For usage questions or general help, please use Discussions.
+  - name: 🔒 Report a Security Vulnerability
+    url: https://github.com/gocronx-team/memlimit/security/advisories/new
+    about: Please report security issues privately, NOT in public issues.

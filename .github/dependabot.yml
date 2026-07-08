@@ -1,0 +1,27 @@
+version: 2
+updates:
+  # Library module (dependency-free today; catches any future addition + Go bumps).
+  - package-ecosystem: gomod
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      go-deps:
+        patterns: ["*"]
+
+  # Comparison harness (pulls the reference library for benchmarks).
+  - package-ecosystem: gomod
+    directory: /compare
+    schedule:
+      interval: weekly
+    groups:
+      compare-deps:
+        patterns: ["*"]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    ignore:
+      - dependency-name: "actions/*"
+        update-types: ["version-update:semver-major"]
