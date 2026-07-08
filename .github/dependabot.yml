@@ -22,6 +22,8 @@ updates:
     directory: /
     schedule:
       interval: monthly
+    # Don't auto-take major bumps of CI actions (e.g. golangci-lint-action),
+    # they can change inputs or require a newer linter and break CI. Bump manually.
     ignore:
-      - dependency-name: "actions/*"
+      - dependency-name: "*"
         update-types: ["version-update:semver-major"]
