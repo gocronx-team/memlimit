@@ -3,7 +3,7 @@
 // module, so the library itself stays dependency-free.
 module github.com/gocronx-team/memlimit/compare
 
-go 1.22.0
+go 1.24
 
 require (
 	github.com/KimMachineGun/automemlimit v0.7.5
